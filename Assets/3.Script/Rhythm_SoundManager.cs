@@ -48,6 +48,11 @@ public class Rhythm_SoundManager : MonoBehaviour
         Debug.Log($"PlayBGM {name} ¾øÀ½");
     }
 
+    public bool BGMisPlaying()
+    {
+        return BGMPlayer.isPlaying;
+    }
+
     public void StopBGM()
     {
         BGMPlayer.Stop();

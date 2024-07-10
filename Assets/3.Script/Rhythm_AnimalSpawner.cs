@@ -9,20 +9,16 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
     // public Rhythm_AnimalPooling animalPool;
     [SerializeField] private Transform Spawner;
     private GameObject obj;
-    private double current_time;
+    private double current_time = 0.07f;
     private int BPM = 130;
-    private int count = 0;
+    private int count = 1;
     private int[] animal_appear;
-
-    private void Awake()
-    {
-        current_time = -4.225d;
-    }
 
     private void Start()
     {
-        animal_appear = new int[112]
+        animal_appear = new int[122]
         {
+            0,0,0,0,0,0,0,0,0,0,
             0,0,1,0,0,0,0,0,0,0,
             1,0,0,0,0,0,0,0,1,0,
             0,0,1,0,0,0,1,0,0,1,
@@ -42,7 +38,8 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (count > 111) return;
+        if (count > 121) return;
+        if (!Rhythm_SoundManager.instance.BGMisPlaying()) return;
         current_time += Time.deltaTime;
         if (current_time > 60d / BPM)
         {
