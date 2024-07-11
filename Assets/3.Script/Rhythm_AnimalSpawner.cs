@@ -16,7 +16,7 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
 
     private void Start()
     {
-        animal_appear = new int[122]
+        animal_appear = new int[127]
         {
             0,0,0,0,0,0,0,0,0,0,
             0,0,1,0,0,0,0,0,0,0,
@@ -32,13 +32,13 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
             1,0,0,0,1,1,0,0,1,0,
 
             0,0,1,1,0,0,1,0,0,0,
-            1,1
+            1,1,0,0,0,0,0
         };
     }
 
     private void FixedUpdate()
     {
-        if (count > 121) return;
+        if (count > 126) return;
         if (!Rhythm_SoundManager.instance.BGMisPlaying()) return;
         current_time += Time.deltaTime;
         if (current_time > 60d / BPM)
@@ -62,6 +62,10 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
                 obj.GetComponent<Rigidbody>().AddTorque(v * 10f, ForceMode.Impulse);
             }
             count++;
+            if(count > 126)
+            {
+                Rhythm_ChapterManager.instance.ResultAppear();
+            }
             current_time -= (60d / BPM);
         }
     }

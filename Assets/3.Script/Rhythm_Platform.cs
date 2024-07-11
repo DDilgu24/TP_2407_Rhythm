@@ -11,7 +11,7 @@ public class Rhythm_Platform : MonoBehaviour
         if (col.CompareTag("Animal"))
         {
             Rhythm_SoundManager.instance.PlaySFX("Miss");
-            print("Miss");
+            Rhythm_ChapterManager.instance.CountAdd(false);
             Rhythm_AnimalPooling.instance.ReturnObjectToPool(col.gameObject);
         }
         else
