@@ -56,7 +56,7 @@ public class Rhythm_AnimalSpawner : MonoBehaviour
                 // 2. 풀에서 꺼낸 동물의 위치를 설정한다.
                 obj.transform.position = Spawner.position;
                 // 3. Rigidbody에 힘 적용(방향 - forward / 크기 / 힘의 종류)
-                Vector3 v = new Vector3(-0.475f, -0.05f, -0.5f);
+                Vector3 v = new Vector3(-0.48f, -0.05f, -0.5f);
                 obj.GetComponent<Rigidbody>().AddForce(v * 40f, ForceMode.Impulse);
                 v = new Vector3(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
                 obj.GetComponent<Rigidbody>().AddTorque(v * 10f, ForceMode.Impulse);

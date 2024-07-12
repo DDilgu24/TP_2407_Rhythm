@@ -77,10 +77,11 @@
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectCycler.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs" />
+    <Compile Include="Assets\SwingEnd.cs" />
     <Compile Include="Assets\3.Script\Rhythm_Platform.cs" />
     <Compile Include="Assets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\3.Script\Rhythm_AnimalSpawner.cs" />
-    <Compile Include="Assets\SwingEnd.cs" />
+    <Compile Include="Assets\3.Script\Rhythm_ButtonController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Rhythm_Animal : MonoBehaviour
 {
-    
+    public int species;
 }
